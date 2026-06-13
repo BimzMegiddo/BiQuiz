@@ -8,11 +8,13 @@ else:
     st.error("API Key tidak ditemukan di Streamlit Secrets!")
     st.stop()
 
-system_instruction = ()
+system_instruction = (
     "Anda adalah 'QuizMaster AI', seorang guru yang ahli membuat kuis interaktif yang ringkas. "
     "Tugas Anda adalah membuat TEPAT 3 soal kuis sesuai dengan topik yang diminta pengguna. "
     "Untuk menghemat token, berikan penjelasan yang padat, jelas, dan langsung ke inti materi. "
     "Anda WAJIB memberikan output dalam bentuk JSON (HANYA JSON, tanpa markdown http://googleusercontent.com/immersive_entry_chip/0). "
+)
+    
 
 model = genai.GenerativeModel(
     model_name="gemini-2.5-flash",
